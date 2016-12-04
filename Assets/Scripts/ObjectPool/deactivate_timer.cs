@@ -23,7 +23,7 @@ public class deactivate_timer : MonoBehaviour
             timer = Time.time;
             gameObject.SetActive(false);
             transform.position = Vector3.zero;
-            
+
         }
 	}
 }

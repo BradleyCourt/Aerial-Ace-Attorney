@@ -23,6 +23,7 @@ GameObject:
   - 54: {fileID: 54000012967168336}
   - 114: {fileID: 114000012137576880}
   - 114: {fileID: 114000013044008176}
+  - 114: {fileID: 114000011380374404}
   m_Layer: 0
   m_Name: bullet_level_1
   m_TagString: Bullet
@@ -58,6 +59,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &114000011380374404
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012395757740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 426022daef358344ca976c9cdcd7d379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 1000012395757740}
+  speed: {x: 20, y: 0, z: 0}
 --- !u!114 &114000012137576880
 MonoBehaviour:
   m_ObjectHideFlags: 1
