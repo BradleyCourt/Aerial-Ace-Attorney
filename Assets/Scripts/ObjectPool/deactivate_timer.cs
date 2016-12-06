@@ -18,7 +18,7 @@ public class deactivate_timer : MonoBehaviour
 	void Update ()
     {
 
-	    if(Time.time > timer + lifespan)
+	    if(Time.time > timer + lifespan)        
         {
             timer = Time.time;
             gameObject.SetActive(false);

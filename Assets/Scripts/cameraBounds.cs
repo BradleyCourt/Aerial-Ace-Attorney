@@ -23,4 +23,4 @@ public class cameraBounds : MonoBehaviour {
 
         transform.position = Camera.main.ViewportToWorldPoint(pos);
     }
-}
+}   
