@@ -5,6 +5,8 @@ public class plane_fire : MonoBehaviour
 {
     public Rigidbody projectile;
     public float speed = 20;
+    public float lifespan;
+    private float timer;
     // Use this for initialization
     void Start()
     {
@@ -23,6 +25,15 @@ public class plane_fire : MonoBehaviour
         {
             object_pool activate = GameObject.Find("object_pool").GetComponent<object_pool>();
             if (Input.GetButtonDown("Fire1")) activate.initiate_object();
+            {
+                if (Time.time > timer + lifespan)
+                {
+                    timer = Time.time;
+                    projectile.gameObject.SetActive(false);
+                    projectile.gameObject.transform.position = Vector3.zero;
+
+                }
+            }
 
            // InstantiatedProjectile.velocity = transform.TransformDirection(new Vector2(speed, 0));
 
