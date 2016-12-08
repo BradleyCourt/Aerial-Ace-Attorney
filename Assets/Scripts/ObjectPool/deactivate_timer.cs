@@ -17,13 +17,13 @@ public class deactivate_timer : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
+    
+	    //if(Time.time > timer + lifespan)        
+     //   {
+     //       timer = Time.time;
+     //       gameObject.SetActive(false);
+     //       transform.position = Vector3.zero;
 
-	    if(Time.time > timer + lifespan)        
-        {
-            timer = Time.time;
-            gameObject.SetActive(false);
-            transform.position = Vector3.zero;
-
-        }
+     //   }
 	}
 }
