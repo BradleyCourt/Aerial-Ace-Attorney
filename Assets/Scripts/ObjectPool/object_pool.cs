@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class object_pool : MonoBehaviour
 {
     // sets all items in array to null
-    private GameObject[] objects = null;
+	//public GameObject[] objects = null;		
+	[HideInInspector] public List<GameObject> objects;		// NOTE: This needs to be public so other classes accessing the pool can use it. Also now using a list so bullets can be added much easier
     public Transform Target;
     // allows designers to dictate what object is getting pooled
     public GameObject object_to_instantiate;
@@ -14,12 +16,20 @@ public class object_pool : MonoBehaviour
     
     void Start()
     {
-        objects = new GameObject[pool_size];
-        for (int i = 0; i < pool_size; i++)
-        {
-            objects[i] = Instantiate(object_to_instantiate) as GameObject;
-            objects[i].SetActive(false);
-        }
+		/* This code worked for an array, but we need a List of GameObjects so bullets can be added dynamically with much less overhead */
+        //objects = new GameObject[pool_size];
+        //for (int i = 0; i < pool_size; i++)
+        //{
+        //    objects[i] = Instantiate(object_to_instantiate) as GameObject;
+        //    objects[i].SetActive(false);
+        //}
+
+		/* New code, works with List<GameObject> */
+		for (int i = 0; i < pool_size; i++)
+		{
+			objects.Add(Instantiate(object_to_instantiate, this.transform) as GameObject);
+			objects[i].SetActive(false);
+		}
     }
     // Update is called once per frame
     public void initiate_object()
