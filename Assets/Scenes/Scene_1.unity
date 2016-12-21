@@ -99,9 +99,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 155909012}
   - 212: {fileID: 155909013}
+  - 65: {fileID: 155909014}
   m_Layer: 0
   m_Name: rockSnowDown 2
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -152,6 +153,76 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!65 &155909014
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 155909011}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.65899307, y: 2.3899999, z: 0.19999999}
+  m_Center: {x: 0.102684155, y: 0, z: 0}
+--- !u!1 &214006053 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000010731445796, guid: e9c33643726513245877e6b993c30740,
+    type: 2}
+  m_PrefabInternal: {fileID: 1542412880}
+--- !u!114 &214006054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 214006053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 523a2bec0a32434468e972607d381089, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 214006053}
+--- !u!114 &214006055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 214006053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c29ac34086022345b9e8a8b2cec0325, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isdead: 0
+  Health: 0
+  Damage: 0
+--- !u!54 &214006061
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 214006053}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &214006062
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 214006053}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.88, y: 0.73, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &250938393
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,6 +250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe770343235213f458badccedde4d24c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objects: []
   Target: {fileID: 1505912144}
   object_to_instantiate: {fileID: 1000012395757740, guid: 7d541bd503b91f34988d857b9f575077,
     type: 2}
@@ -311,9 +383,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 840109211}
   - 212: {fileID: 840109212}
+  - 65: {fileID: 840109213}
   m_Layer: 0
   m_Name: rockSnow 1
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -364,6 +437,18 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!65 &840109213
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 840109210}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.59042156, y: 2.3900003, z: 0.20000002}
+  m_Center: {x: -0.019107312, y: 0, z: 0}
 --- !u!1 &899110285
 GameObject:
   m_ObjectHideFlags: 0
