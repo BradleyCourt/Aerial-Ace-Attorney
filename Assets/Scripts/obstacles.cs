@@ -17,6 +17,7 @@ public class obstacles : MonoBehaviour {
         if(col.gameObject.tag == "Obstacle")
         {
             Debug.Log("collision");
+            
             Destroy(Player);
         }
     }
