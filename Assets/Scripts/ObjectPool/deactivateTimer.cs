@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class deactivate_timer : MonoBehaviour
+public class deactivateTimer : MonoBehaviour
 {
     // how long it exists for before its removed
     public float lifespan;

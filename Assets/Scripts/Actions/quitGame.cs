@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class quit_game : action {
+public class quitGame : action {
 
 	// Use this for initialization
 	void Start () {
@@ -15,5 +15,6 @@ public class quit_game : action {
     public override void execute()
     {
         Application.Quit();
+        Debug.Log("i quit");
     }
 }

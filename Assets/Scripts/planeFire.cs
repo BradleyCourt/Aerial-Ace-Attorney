@@ -1,14 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class plane_fire : MonoBehaviour
+public class planeFire : MonoBehaviour
 {
     public Rigidbody projectile;
 	public Transform muzzlePoint;		// Added a parameter for the bullet's fire point to be specified. I noticed you already had an empty GameObject called plane_gun attached to the plane
     public float speed = 20;
     public float lifespan;
     private float timer;
-  
+
+    public int currentPool = 0;
+    public objectPool[] bulletPools;
+
     // Use this for initialization
     void Start()
     {
@@ -18,7 +21,7 @@ public class plane_fire : MonoBehaviour
     void Update()
     {
 
-		/* OLD CODE:
+        /* OLD CODE:
 		 * Please note the second if statement was not attached to the braces, and instead would run the activate.initiate_object() line of code.
 		 * 
 		 */
@@ -32,27 +35,37 @@ public class plane_fire : MonoBehaviour
         //    
         //}
 
-		/* NEW CODE: */
+        /* NEW CODE: */
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            currentPool++;
+            if (currentPool >= bulletPools.Length)
+                currentPool = 0;
+        }
+
 
 		if (Input.GetButtonDown("Fire1"))		// If the player is firing
 		{
-			// Find the pool object in the scene
-			GameObject poolHolder = GameObject.Find("object_pool");
-			if (poolHolder == null)		// Check if the object exists in the scene
-			{
-				// The object needs to be created
-				poolHolder = new GameObject();
-				poolHolder.name = "object_pool";
-			}
+            // Find the pool object in the scene
+            //GameObject poolHolder = GameObject.Find("object_pool");
+            //if (poolHolder == null)		// Check if the object exists in the scene
+            //{
+            //	// The object needs to be created
+            //	poolHolder = new GameObject();
+            //	poolHolder.name = "object_pool";
+            //}
 
-			// Now find the pooling script on the object
-			object_pool pool = poolHolder.GetComponent<object_pool>();
-			if (pool == null)		// Check if the script exists
-			{
+            // Now find the pooling script on the object
+            //objectPool pool = poolHolder.GetComponent<objectPool>();
+
+            objectPool pool = bulletPools[currentPool]; 
+			//if (pool == null)		// Check if the script exists
+			//{
 				// The pooling script needs to be created
-				pool = poolHolder.AddComponent<object_pool>();
-				pool.pool_size = 50;		// Maybe determine a default pool size elsewhere?
-			}
+				//pool = poolHolder.AddComponent<objectPool>();
+				//pool.pool_size = 50;		// Maybe determine a default pool size elsewhere?
+			//}
 
 			// Now that we have the pool, we need to find the first object available in the pool
 			GameObject projectile = null;

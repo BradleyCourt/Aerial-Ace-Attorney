@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class camera_scroll : MonoBehaviour
+public class cameraScroll : MonoBehaviour
 {
     public Vector3 speed = new Vector3(0, 0, 0);   
     public GameObject cam;

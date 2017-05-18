@@ -21,13 +21,5 @@ public class obstacles : MonoBehaviour {
             Destroy(Player);
         }
     }
-    //not working 
-    //void onTriggerEntry(Collision col)
-    //{
-    //    if (col.gameObject.tag == "Player")
-    //    {
-    //        Debug.Log("collided");
-    //        Destroy(col.gameObject);
-    //    }
-    //}
+
 }

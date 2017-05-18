@@ -16,7 +16,11 @@ public class animator : MonoBehaviour
     {
         if (Input.GetKeyDown (KeyCode.F))
         {
-            animate.SetTrigger("startFlip");
+            if (animate.IsInTransition(0) == false)
+            {
+                animate.SetTrigger("startFlip");
+                Debug.Log("flipped");
+            }
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class bullet_rotation : MonoBehaviour {
+public class bulletRotation : MonoBehaviour {
 
 	// Use this for initialization
 	void Start ()

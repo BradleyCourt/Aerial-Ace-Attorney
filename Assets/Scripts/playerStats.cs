@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Player_stats : MonoBehaviour
+public class playerStats : MonoBehaviour
 {
     public bool isdead;
     public int Health;

@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class object_pool : MonoBehaviour
+public class objectPool : MonoBehaviour
 {
     // sets all items in array to null
 	//public GameObject[] objects = null;		
@@ -16,14 +16,6 @@ public class object_pool : MonoBehaviour
     
     void Start()
     {
-		/* This code worked for an array, but we need a List of GameObjects so bullets can be added dynamically with much less overhead */
-        //objects = new GameObject[pool_size];
-        //for (int i = 0; i < pool_size; i++)
-        //{
-        //    objects[i] = Instantiate(object_to_instantiate) as GameObject;
-        //    objects[i].SetActive(false);
-        //}
-
 		/* New code, works with List<GameObject> */
 		for (int i = 0; i < pool_size; i++)
 		{

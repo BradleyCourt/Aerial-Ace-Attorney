@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class red_plane_controller : MonoBehaviour
+public class redPlaneController : MonoBehaviour
 {
     public int speed = 5;
     

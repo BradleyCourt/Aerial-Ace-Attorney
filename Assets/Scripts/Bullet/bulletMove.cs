@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class bullet_move : MonoBehaviour
+public class bulletMove : MonoBehaviour
 {
     public GameObject projectile;
     public Vector3 speed = new Vector3(0,0,0);

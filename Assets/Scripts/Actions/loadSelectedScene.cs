@@ -2,7 +2,7 @@
 using UnityEngine.SceneManagement;
 using System.Collections;
 
-public class load_selected_scene : action
+public class loadSelectedScene : action
 {
     public string scenename = ""; 
 

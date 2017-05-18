@@ -16,14 +16,13 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 4000011090685268}
-  - 212: {fileID: 212000011124298516}
-  - 54: {fileID: 54000012967168336}
-  - 114: {fileID: 114000012137576880}
-  - 114: {fileID: 114000013044008176}
-  - 114: {fileID: 114000011380374404}
+  - component: {fileID: 4000011090685268}
+  - component: {fileID: 212000011124298516}
+  - component: {fileID: 54000012967168336}
+  - component: {fileID: 114000012137576880}
+  - component: {fileID: 114614820485063994}
   m_Layer: 0
   m_Name: bullet_level_1
   m_TagString: Bullet
@@ -40,10 +39,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &54000012967168336
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -59,19 +58,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114000011380374404
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012395757740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 426022daef358344ca976c9cdcd7d379, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 1000012395757740}
-  speed: {x: 20, y: 0, z: 0}
 --- !u!114 &114000012137576880
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -83,7 +69,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f760ff8c397e37c478a8d9cc098be2fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114000013044008176
+--- !u!114 &114614820485063994
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -91,10 +77,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000012395757740}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9383561f0d0ebed40b92b21029e5b00f, type: 3}
+  m_Script: {fileID: 11500000, guid: 426022daef358344ca976c9cdcd7d379, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifespan: 5
+  projectile: {fileID: 1000012395757740}
+  speed: {x: 15, y: 0, z: 0}
 --- !u!212 &212000011124298516
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -109,7 +96,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 0
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -117,7 +106,7 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 1
+  m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
