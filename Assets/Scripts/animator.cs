@@ -1,20 +1,22 @@
 ﻿using UnityEngine;
 using System.Collections;
+using InControl;
 
 public class animator : MonoBehaviour
     {
     Animator animate;
-	// Use this for initialization
-	void Start ()
+    public InputDevice device;
+    // Use this for initialization
+    void Start ()
     {
         animate = GetComponent<Animator>();
-
+        device = InputManager.ActiveDevice;
     }
 	
 	// Update is called once per frame
 	void Update () 
     {
-        if (Input.GetKeyDown (KeyCode.F))
+        if (Input.GetKeyDown (KeyCode.F) || (device != null && device.RightTrigger.WasPressed))
         {
             if (animate.IsInTransition(0) == false)
             {

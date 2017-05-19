@@ -16,7 +16,8 @@ public class objectPool : MonoBehaviour
     
     void Start()
     {
-		/* New code, works with List<GameObject> */
+        /* New code, works with List<GameObject> */
+        objects.Clear();
 		for (int i = 0; i < pool_size; i++)
 		{
 			objects.Add(Instantiate(object_to_instantiate, this.transform) as GameObject);
