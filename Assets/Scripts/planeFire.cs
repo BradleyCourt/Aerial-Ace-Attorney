@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using InControl;
+using UnityEngine.SceneManagement;
+
 public class planeFire : MonoBehaviour
 {
     public Rigidbody projectile;
@@ -108,7 +110,7 @@ public class planeFire : MonoBehaviour
         if (col.gameObject.tag == "levelComplete")
         {
             Destroy(levelComplete);
-            //
+            SceneManager.LoadScene("Level_2");
         }
     }
 
