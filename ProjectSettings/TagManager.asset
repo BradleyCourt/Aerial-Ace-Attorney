@@ -11,6 +11,7 @@ TagManager:
   - firePowerUp2
   - firePowerUp3
   - levelComplete
+  - BulletUpgrade
   layers:
   - Default
   - TransparentFX
