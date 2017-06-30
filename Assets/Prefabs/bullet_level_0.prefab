@@ -20,11 +20,13 @@ GameObject:
   m_Component:
   - component: {fileID: 4485458570006382}
   - component: {fileID: 212763919244383568}
-  - component: {fileID: 54559276896566638}
   - component: {fileID: 114921363254122510}
-  m_Layer: 0
+  - component: {fileID: 114928489715485404}
+  - component: {fileID: 65381894499494318}
+  - component: {fileID: 54254017575888310}
+  m_Layer: 9
   m_Name: bullet_level_0
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42,7 +44,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &54559276896566638
+--- !u!54 &54254017575888310
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -55,8 +57,20 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Constraints: 112
+  m_CollisionDetection: 1
+--- !u!65 &65381894499494318
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1163802557487030}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.5, y: 1.6, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114921363254122510
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -70,6 +84,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 1163802557487030}
   speed: {x: 10, y: 0, z: 0}
+--- !u!114 &114928489715485404
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1163802557487030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 508754bf979a48b40ab2d57a8e07ee82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletDmg: 10
 --- !u!212 &212763919244383568
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -24,6 +24,8 @@ public class planeFire : MonoBehaviour
     public GameObject firePower3;
     public GameObject BulletUpgrade;
     public GameObject levelComplete;
+
+    public float frenzyDur = 10.0f;
     bool frenzy = false;
 
     // Use this for initialization      
@@ -35,6 +37,17 @@ public class planeFire : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (frenzy == true)
+        {
+            frenzyDur -= Time.deltaTime;
+        }
+        if (frenzyDur <= 0)
+        {
+            frenzy = false;
+            frenzyDur = 10;
+            projectile.transform.position = muzzlePoint.position;
+        }
+
 
         if (Input.GetKeyDown(KeyCode.P) || (device != null && device.Action4.WasPressed))
         {
@@ -54,8 +67,12 @@ public class planeFire : MonoBehaviour
             projectile.SetActive(true);
 
             // Reset the position of the projectile to the plane's gun position (as it will still have the position from the last time it was used in the pool)
+
+
+
             if (frenzy != true)
             {
+    
                 if (muzzlePoint)        // If the muzzlePoint has been specified in the inspector
                     projectile.transform.position = muzzlePoint.position;       // Use the specified point
                 else
@@ -63,6 +80,7 @@ public class planeFire : MonoBehaviour
             }
             else
             {
+               
                 if (muzzlePoint) // If the muzzlePoint has been specified in the inspector
                 {
                     projectile.transform.position = muzzlePoint.position;
@@ -148,14 +166,18 @@ public class planeFire : MonoBehaviour
         {
             Destroy(levelComplete);
             SceneManager.LoadScene("Level_2");
+            currentPool = 0;
         }
         if (col.gameObject.tag == "BulletUpgrade")
         {
             Destroy(BulletUpgrade);
+         
             frenzy = true;
         }
 
+  
     }
+    
 }
 
 

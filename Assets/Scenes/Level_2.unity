@@ -11838,7 +11838,8 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 65336685000316030, guid: b0139fc59ddcb91419bbe9f9ba3fae66, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: b0139fc59ddcb91419bbe9f9ba3fae66, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1215214329
@@ -20661,6 +20662,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 0}
   muzzlePoint: {fileID: 316446443}
+  BulUpgrade1: {fileID: 0}
+  BulUpgrade2: {fileID: 0}
   speed: 20
   lifespan: 5
   currentPool: 0
@@ -20672,6 +20675,7 @@ MonoBehaviour:
   firePower1: {fileID: 1576431119}
   firePower2: {fileID: 1750700020}
   firePower3: {fileID: 1164273004}
+  BulletUpgrade: {fileID: 0}
   levelComplete: {fileID: 1421038126}
 --- !u!114 &1975449644
 MonoBehaviour:
@@ -20696,8 +20700,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isdead: 0
-  Health: 10
-  Damage: 10
+  currentHealth: 0
+  maxHealth: 0
 --- !u!114 &1975449646
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4438368394584848}
   - component: {fileID: 212785964038794252}
   - component: {fileID: 65725404373955256}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: levelComplete
-  m_TagString: Untagged
+  m_TagString: levelComplete
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35,7 +35,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1711146706617012}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.372808, y: -0.74492085, z: 0}
+  m_LocalPosition: {x: 30.05, y: 0.062, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -51,8 +51,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.53, y: 3.8, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 4.53, y: 3.8, z: 3.1447034}
+  m_Center: {x: 0, y: 0, z: -1.0723517}
 --- !u!212 &212785964038794252
 SpriteRenderer:
   m_ObjectHideFlags: 1
